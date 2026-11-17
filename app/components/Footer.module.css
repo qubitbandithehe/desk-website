@@ -1,0 +1,131 @@
+.footer {
+  background-color: var(--color-text);
+  color: rgba(255, 255, 255, 0.75);
+  padding-top: var(--space-16);
+}
+
+.top {
+  display: flex;
+  gap: var(--space-16);
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Brand */
+.brand {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.logo {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logoMark {
+  color: var(--color-accent);
+}
+
+.tagline {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.disclaimer {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: var(--space-1);
+}
+
+/* Nav grid */
+.navGrid {
+  display: flex;
+  gap: var(--space-12);
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.navCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 140px;
+}
+
+.navHeading {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.navLink {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.55);
+  transition: color var(--transition);
+  word-break: break-word;
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  color: #fff;
+}
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--space-6);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.copy {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.legal {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 900px) {
+  .top {
+    flex-direction: column;
+    gap: var(--space-10);
+  }
+
+  .brand {
+    flex: none;
+  }
+
+  .navGrid {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 540px) {
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(249, 247, 244, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.scrolled {
+  border-color: var(--color-border);
+  background-color: rgba(249, 247, 244, 0.97);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  height: 72px;
+}
+
+/* Logo */
+.logo {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  color: var(--color-accent);
+  font-size: 1.4em;
+  line-height: 1;
+}
+
+/* Desktop nav */
+.nav {
+  flex: 1;
+}
+
+.navList {
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.navLink {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.01em;
+  transition: color var(--transition);
+  padding-block: var(--space-2);
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  color: var(--color-text);
+}
+
+/* CTA */
+.cta {
+  flex-shrink: 0;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--space-2);
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Mobile menu */
+.mobileMenu {
+  display: none;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.mobileMenuOpen {
+  max-height: 400px;
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--container-pad) var(--space-6);
+  gap: var(--space-1);
+}
+
+.mobileNavLink {
+  display: block;
+  padding: var(--space-3) 0;
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileCta {
+  margin-top: var(--space-4);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav,
+  .cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+}

@@ -1,0 +1,127 @@
+.section {
+  background-color: var(--color-bg);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* Image */
+.imageWrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 8 / 7;
+  background-color: var(--color-border);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pullStat {
+  position: absolute;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  background-color: var(--color-text);
+  color: #fff;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.statNum {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: var(--text-sm);
+  opacity: 0.65;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Text */
+.eyebrow {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: var(--space-6);
+}
+
+.body {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.statValue {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.statDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.65;
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .imageWrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  .stats {
+    gap: var(--space-6);
+  }
+}

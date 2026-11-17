@@ -1,0 +1,81 @@
+.section {
+  background-color: var(--color-bg);
+}
+
+.card {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* Decorative open-quote mark */
+.card::before {
+  content: "\201C";
+  font-size: 6rem;
+  line-height: 0.5;
+  color: var(--color-accent);
+  opacity: 0.4;
+  font-family: Georgia, serif;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.quote p {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: left;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+
+.name {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--text-base);
+}
+
+.role {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.disclaimer {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
+@media (max-width: 540px) {
+  .caption {
+    flex-direction: column;
+    text-align: center;
+  }
+}
